@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #071426;
+    --navy-light: #10243d;
+    --orange: #ff8c32;
+    --white: #ffffff;
+    --gray: #aab7c8;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar {
+    background: #091a30;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--orange);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--gray);
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--orange);
+}
+
+/* ==========================
+   HOME
+========================== */
+
+.hero {
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-subtitle {
+    color: var(--orange);
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: var(--orange);
+}
+
+.hero p {
+    color: var(--gray);
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 6px;
+    background: var(--orange);
+    color: #071426;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #ffa653;
+    transform: translateY(-3px);
+}
+
+/* ==========================
+   SECTION
+========================== */
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 35px;
+    border-left: 5px solid var(--orange);
+    padding-left: 15px;
+}
+
+.section-title span {
+    color: var(--orange);
+}
+
+.card {
+    background: var(--navy-light);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,.07);
+}
+
+.card p {
+    color: var(--gray);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* ==========================
+   SKILLS
+========================== */
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.skill-bar {
+    background: #263951;
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    background: var(--orange);
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* ==========================
+   FORMS & TABLES
+========================== */
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 18px;
+    background: #10243d;
+    color: white;
+    border: 1px solid #334861;
+    border-radius: 6px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid #334861;
+}
+
+th {
+    color: var(--orange);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #091a30;
+    color: var(--gray);
+    margin-top: 60px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 768px) {
+    .nav-content {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+}
